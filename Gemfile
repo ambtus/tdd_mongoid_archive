@@ -23,7 +23,7 @@ end
 # testing gems
 group :test do
   gem 'autotest'
-  gem 'capybara'
+  gem 'capybara', '=0.3.9'
   gem 'cucumber-rails'
   gem 'launchy'    # So you can do Then show me the page
 end

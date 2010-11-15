@@ -1,3 +1,7 @@
+Given /^there are no users$/ do
+  User.destroy_all
+end
+
 Given /^I am not logged in$/ do
   visit('/users/sign_out') # ensure that at least
 end
@@ -8,7 +12,7 @@ Given /^there is a user "([^\"]*)"$/ do |login|
     User.new(:email => "#{login}@example.org",
              :login => login,
              :password => "secret",
-             :password_confirmation => password).save!
+             :password_confirmation => "secret").save!
   end
 end
 
