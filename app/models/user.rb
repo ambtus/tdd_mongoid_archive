@@ -9,6 +9,6 @@ class User
   validates_presence_of :login, :email
   validates_uniqueness_of :login, :email, :case_sensitive => false
 
-  attr_protected :name, :email, :password, :password_confirmation
+  attr_accessible :login, :email, :password, :password_confirmation
 
 end

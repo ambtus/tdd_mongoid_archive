@@ -1,5 +1,7 @@
 Mongoid::Application.routes.draw do
 
+  resources :people, :only => [:index, :show]
+
   devise_for :users, :path_names => {:sign_in => 'login', :sign_out => 'logout'}
   devise_for :admins, :path_names => {:sign_in => 'login', :sign_out => 'logout'}
 

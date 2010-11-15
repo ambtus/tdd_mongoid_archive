@@ -1,9 +1,9 @@
 %h2 Sign in
 = form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
   %p
-    = f.label :email
+    = f.label :login
     %br/
-    = f.text_field :email
+    = f.text_field :login
   %p
     = f.label :password
     %br/
@@ -13,4 +13,5 @@
       = f.check_box :remember_me
       = f.label :remember_me
   %p= f.submit "Sign in"
-= render :partial => "devise/shared/links"
+
+= link_to "Forgot your password?", new_password_path(resource_name)

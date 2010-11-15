@@ -22,6 +22,7 @@ end
 
 # testing gems
 group :test do
+  gem 'autotest'
   gem 'capybara'
   gem 'cucumber-rails'
   gem 'launchy'    # So you can do Then show me the page
