@@ -15,6 +15,9 @@ group :development do
   # enable debugging with "rails server -u" or "rails server --debugger"
   gem 'ruby-debug19', :require => 'ruby-debug'
   gem 'haml-rails'
+  # for rails generate devise:views
+  gem 'hpricot'
+  gem 'ruby_parser'
 end
 
 # testing gems
