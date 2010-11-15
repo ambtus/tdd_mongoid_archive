@@ -3,7 +3,7 @@ Given /^there are no users$/ do
 end
 
 Given /^I am not logged in$/ do
-  visit('/users/sign_out') # ensure that at least
+  visit('/users/logout') # ensure that at least
 end
 
 Given /^there is a user "([^\"]*)"$/ do |login|
@@ -24,5 +24,5 @@ Given /^I am logged in$/ do
   visit new_user_session_path
   fill_in "user_login", :with => "#{login}"
   fill_in "user_password", :with => "#{password}"
-  click_button "Sign in"
+  click_button "Log in"
 end

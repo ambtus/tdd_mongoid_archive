@@ -11,4 +11,11 @@ Feature: sign up and log in
       And I press "Sign up"
     Then I should see "You have signed up successfully."
 
-
+  Scenario: log in
+    Given there is a user "testuser"
+    When I am on the homepage
+      And I follow "Log in"
+      And I fill in "Login" with "testuser"
+      And I fill in "Password" with "secret"
+      And I press "Log in"
+    Then I should see "Logged in successfully."
