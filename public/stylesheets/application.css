@@ -1,0 +1,10 @@
+body { font: 100%/1.125 'Lucida Grande', Verdana, sans-serif; }
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+#flash_notice { color: green; }
+#flash_alert { color: red; }
+
+#footer {font-size: smaller;}
