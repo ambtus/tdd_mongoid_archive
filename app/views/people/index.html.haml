@@ -1,2 +1,6 @@
-%h1 People#index
-%p Find me in app/views/people/index.html.haml
+#people
+  - if @people.blank?
+    No people!
+  - else
+    - @people.each do |user|
+      = link_to(user.login, person_path(user))

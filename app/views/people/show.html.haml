@@ -1,2 +1,5 @@
-%h1 People#show
-%p Find me in app/views/people/show.html.haml
+#person
+  - if @person.blank?
+    Sorry, no one here by that name!
+  - else
+    = @person.login

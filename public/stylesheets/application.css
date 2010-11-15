@@ -8,3 +8,6 @@ a:hover { color: #fff; background-color:#000; }
 #flash_alert { color: red; }
 
 #footer {font-size: smaller;}
+
+#people { padding: 1em}
+#person { padding: 1em}
