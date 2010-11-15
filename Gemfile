@@ -6,6 +6,7 @@ gem 'rails', '3.0.1'
 gem 'mongoid', '2.0.0.beta.20'
 gem 'bson_ext' # mongo c extensions
 gem 'devise'
+gem 'haml'
 
 # application-specific gems
 
@@ -13,6 +14,7 @@ gem 'devise'
 group :development do
   # enable debugging with "rails server -u" or "rails server --debugger"
   gem 'ruby-debug19', :require => 'ruby-debug'
+  gem 'haml-rails'
 end
 
 # testing gems

@@ -69,6 +69,12 @@ GEM
     gherkin (2.2.9)
       json (~> 1.4.6)
       term-ansicolor (~> 1.0.5)
+    haml (3.0.23)
+    haml-rails (0.3.4)
+      actionpack (~> 3.0)
+      activesupport (~> 3.0)
+      haml (~> 3.0)
+      railties (~> 3.0)
     i18n (0.4.2)
     json (1.4.6)
     json_pure (1.4.6)
@@ -147,6 +153,8 @@ DEPENDENCIES
   capybara
   cucumber-rails
   devise
+  haml
+  haml-rails
   launchy
   mongoid (= 2.0.0.beta.20)
   rails (= 3.0.1)
