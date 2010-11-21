@@ -12,11 +12,20 @@ class User
 
   embeds_many :pseuds
 
-  before_save :ensure_default_pseud
-
-  def ensure_default_pseud
-    self.pseuds.create(:default => true, :name => self.login) if
-      self.pseuds.where(:default => true).count == 0
+  before_create :create_first_pseud
+  def create_first_pseud
+    self.pseuds.build(:name => self.login, :default => true)
   end
 
+  def make_default(pseud_id)
+    old = self.default_pseud
+    old.default = false if old
+    new = self.pseuds.criteria.id(pseud_id).first
+    new.default = true
+  end
+
+  # convenience method
+  def default_pseud
+    self.pseuds.where(:default => true).first
+  end
 end

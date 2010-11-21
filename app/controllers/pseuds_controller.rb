@@ -7,19 +7,19 @@ class PseudsController < ApplicationController
   end
 
   def show
-    @pseud = Pseud.find(params[:id])
+    @pseud = @user.pseuds.criteria.id(params[:id]).first
   end
 
   def new
-    @pseud = Pseud.new
+    @pseud = @user.pseuds.new
   end
 
   def edit
-    @pseud = Pseud.find(params[:id])
+    @pseud = @user.pseuds.criteria.id(params[:id]).first
   end
 
   def create
-    @user.pseuds.new(params[:pseud])
+    @user.pseuds.build(params[:pseud])
 
     if @user.save
       redirect_to(user_pseuds_path(@user), :notice => 'Pseud was successfully created.')
@@ -29,20 +29,16 @@ class PseudsController < ApplicationController
   end
 
   def update
-    @pseud = Pseud.find(params[:id])
-
-    if @pseud.update_attributes(params[:pseud])
-      redirect_to(@pseud, :notice => 'Pseud was successfully updated.')
+    @pseud = @user.pseuds.criteria.id(params[:id]).first
+    @pseud.attributes = params[:pseud]
+    if @user.save
+      redirect_to(User_pseuds_path(@user), :notice => 'Pseud was successfully updated.')
     else
       render :action => "edit"
     end
   end
 
   def destroy
-    @pseud = Pseud.find(params[:id])
-    @pseud.destroy
-
-    redirect_to(pseuds_url)
   end
 
   private

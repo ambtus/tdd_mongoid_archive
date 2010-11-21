@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @pseud
+= link_to 'Show', [@user, @pseud]
 \|
-= link_to 'Back', pseuds_path
+= link_to 'Back', user_pseuds_path(@user)

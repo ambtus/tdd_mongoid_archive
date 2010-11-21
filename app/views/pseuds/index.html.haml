@@ -1,14 +1,15 @@
 %h1= #{@user.login}'s pseuds
 
-- @pseuds.each do |pseud|
-  = pseud.name
-  - if pseud.default?
-    (default)
-  = link_to 'Show', [@user, pseud]
-  = link_to 'Edit', edit_user_pseud_path(@user, pseud)
-  - unless pseud.default?
-    = link_to 'Destroy', pseud, :confirm => 'Are you sure?', :method => :delete
-
-%br
+.form
+  - @pseuds.each do |pseud|
+    = pseud.name
+    - if pseud.default?
+      (default)
+    = link_to 'Show', [@user, pseud]
+    = link_to 'Edit', edit_user_pseud_path(@user, pseud)
+    - unless pseud.default?
+      = link_to 'Make default', update_default_path(@user, pseud)
+      = link_to 'Remove', [@user, pseud], :method => :delete
+    %br
 
 = link_to 'Add a pseud', new_user_pseud_path

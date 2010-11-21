@@ -9,6 +9,8 @@ TddMongoid::Application.routes.draw do
     resources :pseuds
   end
 
+  match "/users/:user_id/pseuds/:pseud_id/make_default", :to => 'users#update', :as => 'update_default'
+
   resources :people, :only => [:index, :show]
 
   root :to => "home#index"

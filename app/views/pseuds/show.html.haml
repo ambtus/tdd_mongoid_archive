@@ -1,9 +1,8 @@
-%p#notice= notice
-
 %p
-  %b Name:
   = @pseud.name
+  - if @pseud.default
+    (default)
 
-= link_to 'Edit', edit_pseud_path(@pseud)
+= link_to 'Edit', edit_user_pseud_path(@user, @pseud)
 \|
-= link_to 'Back', pseuds_path
+= link_to 'Back', user_pseuds_path(@user)
