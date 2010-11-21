@@ -6,3 +6,4 @@ Feature: User's can have psueds
       And I follow "Edit profile"
         And I follow "Manage my pseuds"
     Then I should see "testuser (default)"
+    When I follow "Add a pseud"

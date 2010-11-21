@@ -1,4 +1,4 @@
-= form_for @user, @pseud do |f|
+= form_for [@user, @pseud] do |f|
   -if @pseud.errors.any?
     #error_explanation
       %h2= "#{pluralize(@pseud.errors.count, "error")} prohibited this pseud from being saved:"
