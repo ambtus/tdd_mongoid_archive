@@ -4,4 +4,4 @@
 require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
-Mongoid::Application.load_tasks
+TddMongoid::Application.load_tasks

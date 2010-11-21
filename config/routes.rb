@@ -1,4 +1,4 @@
-Mongoid::Application.routes.draw do
+TddMongoid::Application.routes.draw do
 
   resources :people, :only => [:index, :show]
 
