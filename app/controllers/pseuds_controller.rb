@@ -19,10 +19,10 @@ class PseudsController < ApplicationController
   end
 
   def create
-    @pseud = @user.pseuds.new(params[:pseud])
+    @user.pseuds.new(params[:pseud])
 
-    if @pseud.save
-      redirect_to(@pseud, :notice => 'Pseud was successfully created.')
+    if @user.save
+      redirect_to(user_pseuds_path(@user), :notice => 'Pseud was successfully created.')
     else
       render :action => "new"
     end

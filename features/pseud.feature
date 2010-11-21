@@ -7,3 +7,7 @@ Feature: User's can have psueds
         And I follow "Manage my pseuds"
     Then I should see "testuser (default)"
     When I follow "Add a pseud"
+      And I fill in "Name" with "Beautiful Long Name!"
+      And I check "Default"
+      And I press "Submit"
+
