@@ -16,8 +16,7 @@ Given /^there is a user "([^\"]*)"$/ do |login|
   end
 end
 
-Given /^I am logged in$/ do
-  login = 'tester'
+Given /^I am logged in as "([^\"]*)"$/ do |login|
   password = 'secret'
 
   Given %{there is a user "#{login}"}

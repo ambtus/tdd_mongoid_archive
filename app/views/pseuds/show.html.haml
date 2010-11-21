@@ -1,0 +1,9 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @pseud.name
+
+= link_to 'Edit', edit_pseud_path(@pseud)
+\|
+= link_to 'Back', pseuds_path

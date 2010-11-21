@@ -1,7 +1,7 @@
 - unless controller.controller_name.match(/(sessions|registrations)/)
   #footer
     - if user_signed_in?
-      = link_to "Edit Profile", edit_user_registration_path
+      = link_to "Edit profile", edit_user_registration_path
       |
       = link_to "Log out", destroy_user_session_path
     - else
